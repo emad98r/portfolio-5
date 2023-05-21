@@ -1,0 +1,32 @@
+@import '../../breakPoints.scss';
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3em;
+
+  @include breakPoints(mobile) {
+    margin-bottom: 1.5em;
+  }
+
+  @include breakPoints(small) {
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    font-size: 3em;
+    color: var(--light-color);
+    text-transform: uppercase;
+
+    @include breakPoints(mobile) {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    span {
+      color: var(--main-color);
+    }
+  }
+}

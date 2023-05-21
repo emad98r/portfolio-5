@@ -1,0 +1,209 @@
+@import '../../breakPoints.scss';
+
+.portfolio {
+  width: 100%;
+  padding: var(--section-m-b) 0;
+
+  @include breakPoints(mobile) {
+    padding: 1em;
+  }
+
+  .container {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    .title {
+      h2 {
+        color: var(--black-color);
+      }
+    }
+
+
+    .all-projects {
+      width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 50vh;
+      margin-bottom: 1em;
+      flex-wrap: nowrap;
+      // margin-left: 679em;
+      animation: slider 5s infinite linear alternate;
+
+      @include breakPoints(mobile) {
+        height: 25vh;
+        margin-left: 0;
+      }
+
+      @include breakPoints(small) {
+        height: 30vh;
+      }
+
+      @include breakPoints(medium) {
+        height: 30vh;
+      }
+
+      &:hover {
+
+        animation-play-state: paused;
+      }
+
+
+
+      .project {
+        cursor: pointer;
+        margin-right: 0.5em;
+        position: relative;
+        height: 50vh;
+        max-width: 630px;
+
+        @include breakPoints(mobile) {
+          height: 25vh;
+        }
+
+        @include breakPoints(small) {
+          height: 30vh;
+        }
+
+        @include breakPoints(medium) {
+          height: 30vh;
+        }
+
+        &:hover {
+          .links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 50vh;
+            background-color: rgba(0, 0, 0, 0.278);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include breakPoints(mobile) {
+              height: 25vh;
+            }
+
+            @include breakPoints(small) {
+              height: 30vh;
+            }
+
+            @include breakPoints(medium) {
+              height: 30vh;
+            }
+
+            a {
+              color: var(--light-color);
+              text-decoration: none;
+              padding: 1.2em 1em;
+              text-align: center;
+              margin-right: 1em;
+              text-transform: capitalize;
+              font-weight: 400;
+
+              &:hover {
+                background-color: var(--black-color);
+                color: var(--main-color);
+              }
+            }
+
+            .web-link {
+              width: 20%;
+              background-color: var(--main-color);
+            }
+
+            .git-link {
+              width: 20%;
+              background-color: var(--main-color);
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 50vh;
+
+          @include breakPoints(mobile) {
+            height: 25vh;
+          }
+
+          @include breakPoints(small) {
+            height: 30vh;
+          }
+
+          @include breakPoints(medium) {
+            height: 30vh;
+          }
+        }
+
+        .links {
+          display: none;
+        }
+
+      }
+    }
+
+    .pages-but {
+      width: 30%;
+      align-self: center;
+
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+
+@keyframes slider {
+
+  10% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(-90%);
+  }
+
+  100% {
+    transform: translateX(-90%);
+  }
+}
+
+@include breakPoints(small) {
+  @keyframes slider {
+    10% {
+      transform: translateX(0);
+    }
+
+    98% {
+      transform: translateX(-94%);
+    }
+
+    100% {
+      transform: translateX(-94%);
+    }
+  }
+}
+
+@include breakPoints(mobile) {
+  @keyframes slider {
+    10% {
+      transform: translateX(0);
+    }
+
+    98% {
+      transform: translateX(-95%);
+    }
+
+    100% {
+      transform: translateX(-95%);
+    }
+  }
+}

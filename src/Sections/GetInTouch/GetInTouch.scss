@@ -1,0 +1,202 @@
+@import '../../breakPoints.scss';
+
+.get-in-touch {
+  background: var(--gray-color);
+  width: 100%;
+  padding: var(--section-m-b) 0;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakPoints(mobile) {
+      flex-direction: column-reverse;
+      gap: 2em;
+    }
+
+    @include breakPoints(small) {
+      flex-direction: column-reverse;
+      gap: 2em;
+    }
+
+    .info {
+      width: 50%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+
+      @include breakPoints(small) {
+        width: 100%;
+      }
+
+      h3 {
+        color: var(--light-color);
+        margin-bottom: 0.5em;
+        font-size: 2em;
+      }
+
+      >p {
+        color: var(--light-color);
+        margin-bottom: 1em;
+        width: 70%;
+        line-height: 1.5;
+        font-size: 1.2em;
+
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+
+        @include breakPoints(small) {
+          width: 100%;
+        }
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        section {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 1em;
+
+          svg {
+            color: var(--main-color);
+            margin-right: 1em;
+            font-size: 1.3em;
+          }
+
+          .data {
+            h5 {
+              color: var(--main-color);
+              text-transform: uppercase;
+              margin-bottom: 0.5em;
+              font-size: 1em;
+            }
+
+            p {
+              color: var(--light-color);
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+
+      .s-m {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        margin-top: 1em;
+
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+
+        @include breakPoints(small) {
+          width: 100%;
+        }
+
+        a {
+          width: 3em;
+          height: 3em;
+          text-decoration: none;
+          border-radius: 50%;
+          background-color: gray;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1em;
+
+          &:hover {
+            border: 2px solid var(--main-color);
+
+
+            svg {
+              color: var(--main-color);
+
+            }
+          }
+
+          &:first-of-type {
+            svg {
+              font-size: 1em;
+            }
+          }
+
+          svg {
+            font-size: 1.2em;
+            height: 1.5em;
+            color: white;
+
+
+          }
+        }
+      }
+    }
+
+    form {
+      width: 50%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+
+      @include breakPoints(small) {
+        width: 100%;
+      }
+
+      .your-info {
+        width: 100%;
+        display: flex;
+        gap: 1em;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        margin-bottom: 0.5em;
+        padding: 1em;
+        border: none;
+        background-color: var(--black-color);
+        color: var(--light-color);
+        resize: none;
+        font-size: 1em;
+        border-radius: 10px;
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+
+      button {
+        background-color: var(--main-color);
+        color: var(--light-color);
+        font-weight: 800;
+        border-radius: 10px;
+
+
+        &:hover {
+          background-color: var(--light-color);
+          color: var(--black-color);
+        }
+
+        svg {
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import './breakPoints.scss';
+
+
+:root {
+
+  // colors ----------------------
+  --main-color: #00ADB5;
+  --black-color: #222831;
+  --gray-color: #393E46;
+  --light-color: #EEEEEE;
+
+  // fonts ---------------------------------
+  --main-font: 'Roboto Condensed', sans-serif;
+
+
+  // border-radius ----------------------
+  --border-r: 15px;
+
+  //section-margin----------------------
+  --section-m-b: 3em;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-color);
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include breakPoints(mobile) {
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  @include breakPoints(small) {
+    width: 90%;
+    padding: 0 1em;
+  }
+
+  @include breakPoints(medium) {
+    width: 95%;
+    padding: 0 1em;
+  }
+}

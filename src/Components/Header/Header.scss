@@ -1,0 +1,87 @@
+@import '../../breakPoints.scss';
+
+header {
+  width: 50%;
+  position: fixed;
+  top: 3em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-color);
+  padding: 1em 0;
+  border-radius: var(--border-r);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.527);
+  z-index: 5;
+
+  @include breakPoints(mobile) {
+    width: 90%;
+    justify-content: space-around;
+
+  }
+
+  .nav-bar {
+    padding: 0 1em;
+    font-size: 1.7em;
+    color: var(--light-color);
+    cursor: pointer;
+    opacity: 0.2;
+    position: relative;
+
+    @include breakPoints(mobile) {
+      padding: 0 0.5em;
+      font-size: 1.5em;
+    }
+
+    &:hover {
+      color: var(--main-color);
+      opacity: 1;
+      transition: all 0.5s ease-out;
+
+    }
+
+    &:hover::after {
+      position: absolute;
+      bottom: -3em;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--light-color);
+      color: var(--black-color);
+      font-size: 0.6em;
+      padding: 0.2em;
+      border-radius: 5px;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:first-of-type:hover::after {
+      content: 'Home';
+
+    }
+
+    &:nth-of-type(2):hover::after {
+      content: 'About me';
+
+    }
+
+    &:nth-of-type(3):hover::after {
+      content: 'Portfolio';
+    }
+
+    &:nth-of-type(4):hover::after {
+      content: 'Contact';
+    }
+
+    &:nth-of-type(5):hover::after {
+      content: 'Services';
+    }
+  }
+
+  .active {
+    color: var(--main-color);
+    opacity: 1;
+  }
+
+
+}

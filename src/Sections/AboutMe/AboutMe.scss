@@ -1,0 +1,146 @@
+@import '../../breakPoints.scss';
+
+.about-me-section {
+  width: 100%;
+  background-color: var(--black-color);
+  padding: var(--section-m-b) 0;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakPoints(mobile) {
+      flex-direction: column;
+    }
+
+    @include breakPoints(small) {
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .personal-info {
+      width: 50%;
+
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+
+      @include breakPoints(small) {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 1.7em;
+        margin-bottom: 1em;
+        color: var(--light-color);
+
+        @include breakPoints(mobile) {
+          font-size: 1em;
+        }
+      }
+
+      .all-infos {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        .info {
+          width: 100%;
+          margin-bottom: 0.5em;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @include breakPoints(mobile) {
+            flex-direction: column;
+          }
+
+          p {
+            font-size: 1.3em;
+            color: var(--main-color);
+            width: fit-content;
+            width: 50%;
+            text-transform: capitalize;
+
+            @include breakPoints(mobile) {
+              font-size: 1em;
+              width: 100%;
+              margin-bottom: 0.5em;
+            }
+
+            span {
+              color: var(--light-color);
+              text-transform: none;
+            }
+
+          }
+        }
+      }
+    }
+
+    .years-of-exp {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+
+      @include breakPoints(mobile) {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      @include breakPoints(small) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .data {
+        border: 1px solid rgba(128, 128, 128, 0.453);
+        padding: 2em 1.5em;
+
+        @include breakPoints(mobile) {
+          padding: 1em;
+        }
+
+        h2 {
+          color: var(--light-color);
+          font-size: 2.5em;
+
+          @include breakPoints(mobile) {
+            font-size: 1.5em;
+          }
+
+          span {
+            color: var(--main-color);
+          }
+        }
+
+        p {
+          margin-left: 1em;
+          color: var(--main-color);
+          position: relative;
+
+          @include breakPoints(mobile) {
+            font-size: 0.8em;
+          }
+
+          &::before {
+            content: '';
+            width: 1em;
+            height: 2px;
+            background-color: var(--light-color);
+            position: absolute;
+            top: 50%;
+            left: -1.5em;
+          }
+        }
+      }
+    }
+  }
+}

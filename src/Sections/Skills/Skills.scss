@@ -1,0 +1,108 @@
+@import '../../breakPoints.scss';
+
+.skills {
+  padding: var(--section-m-b);
+  width: 100%;
+  background-color: var(--gray-color);
+
+  @include breakPoints(mobile) {
+    padding: 1em;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .skills {
+      width: 100%;
+      background-color: var(--light-color);
+      border-radius: var(--border-r);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+      gap: 3em;
+
+      @include breakPoints(mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+        gap: 1em;
+      }
+
+      @include breakPoints(small) {
+        grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+        gap: 1em;
+      }
+
+      .skill {
+        width: 100%;
+        cursor: pointer;
+
+
+        .skill-logo {
+          background-color: #dedede;
+          margin-bottom: 1em;
+          padding: 1.5em 1em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: var(--border-r);
+
+
+          img {
+            width: 80%;
+          }
+        }
+
+        .name-level {
+          width: 100%;
+          background-color: #dedede;
+          border-radius: var(--border-r);
+          position: relative;
+
+          h4 {
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0.5em 1em;
+          }
+
+          .level {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: var(--main-color);
+            padding: 0.5em 1em;
+            border-radius: var(--border-r);
+            color: var(--light-color);
+            text-align: center;
+            display: none;
+            animation: moving 0.5s;
+          }
+        }
+
+        &:hover {
+
+          .level {
+            display: block;
+          }
+
+          .name-level {
+            h4 {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes moving {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
