@@ -75,6 +75,11 @@
               display: flex;
               align-items: center;
               justify-content: center;
+
+              @include breakPoints(mobile) {
+                left: -1.3em;
+                top: 0.8rem;
+              }
             }
 
             span {
@@ -96,6 +101,10 @@
       .trn-info {
         grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
         gap: 2em;
+
+        @include breakPoints(mobile) {
+          gap: 0;
+        }
       }
     }
 

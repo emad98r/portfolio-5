@@ -20,36 +20,6 @@
     justify-content: center;
     flex-direction: column;
 
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2em;
-
-      @include breakPoints(mobile) {
-        width: 100%;
-        flex-wrap: wrap;
-      }
-
-      li {
-        list-style: none;
-        padding: 0.5em 1em;
-        text-transform: capitalize;
-        color: var(--light-color);
-        cursor: pointer;
-
-        &:hover {
-          background-color: var(--main-color);
-          border-radius: 15px;
-        }
-      }
-
-      .active {
-        background-color: var(--main-color);
-        border-radius: 15px;
-      }
-    }
-
     .all-projects {
       width: 100%;
       display: grid;

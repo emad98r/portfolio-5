@@ -10,15 +10,6 @@ const PortfolioPage = () => {
     <div className='portfolio-page'>
       <div className="container">
         <SectionTitle title1='MY' title2='portfolio' />
-        <ul>
-          <li className='project-list active' >all</li>
-          <li className='project-list'>portfolio</li>
-          <li className='project-list'>food</li>
-          <li className='project-list'>shopping</li>
-          <li className='project-list'>technology</li>
-          <li className='project-list'>traveling</li>
-          <li className='project-list'>services</li>
-        </ul>
         <div className="all-projects">
           {ProjectsData.map(item => (
             <div className='project' id={item.proName} key={item.id}>
