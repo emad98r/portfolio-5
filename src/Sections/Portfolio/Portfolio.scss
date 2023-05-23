@@ -31,7 +31,7 @@
       margin-bottom: 1em;
       flex-wrap: nowrap;
       // margin-left: 679em;
-      animation: slider 5s infinite linear alternate;
+      animation: slider 25s infinite linear alternate;
 
       @include breakPoints(mobile) {
         height: 25vh;
