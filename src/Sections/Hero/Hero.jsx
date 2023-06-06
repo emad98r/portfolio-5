@@ -2,7 +2,7 @@ import './Hero.scss';
 
 import photo from '../../Assets/Images/mypic.png'
 import { DownloadButton } from '../../Components/indexCom'
-
+import Cv from '../../Assets/cv.pdf'
 const Hero = () => {
   return (
     <div className='hero'>
@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="wrapper">
             <img src={photo} alt="" />
           </div>
-          <DownloadButton dFile='../../Assets/cv.pdf' name='download CV' />
+          <DownloadButton dFile={Cv} name='download CV' />
         </div>
         <div className="info">
           <h1>EMAD RASHAD, WEB DEVELOPER</h1>
