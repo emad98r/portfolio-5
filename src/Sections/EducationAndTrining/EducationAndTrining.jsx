@@ -2,6 +2,7 @@ import './EducationAndTrining.scss'
 import SectionTitle from '../../Components/SectionTitles/SectionTitle'
 import EductionData from '../../Data/EducationData'
 import TriningCaData from '../../Data/TriningCaData'
+import OnlineCoursesData from '../../Data/OnlineCoursesData'
 
 const EducationAndTrining = () => {
   return (
@@ -25,7 +26,7 @@ const EducationAndTrining = () => {
       <hr />
       <div className="container">
         <div className="trn">
-          <SectionTitle title1='TRINING ' title2='COURSES' />
+          <SectionTitle title2='COURSES' />
           <div className="trn-info">
             {TriningCaData.map(item => (
               <div className='info' key={item.id}>
@@ -35,8 +36,21 @@ const EducationAndTrining = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      <hr />
+      <div className="container">
+        <div className="trn">
+          <SectionTitle title1='ONLINE' title2='COURSES' />
+          <div className="trn-info">
+            {OnlineCoursesData.map(item => (
+              <div className='info' key={item.id}>
+                <b>{item.date}</b>
+                <h2> <i>{item.icon}</i> {item.title} <span>{item.collage}</span> </h2>
 
-
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

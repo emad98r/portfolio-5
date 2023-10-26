@@ -72,16 +72,6 @@ const Skills = () => {
           {/* ----------------------------------------- */}
           <div className="skill">
             <div className="skill-logo">
-              <img src={Jquery} alt="" />
-            </div>
-            <div className="name-level">
-              <h4>Jquery</h4>
-              <div className="level" style={{ width: '40%' }}> 40%</div>
-            </div>
-          </div>
-          {/* ----------------------------------------- */}
-          <div className="skill">
-            <div className="skill-logo">
               <img src={github} alt="" />
             </div>
             <div className="name-level">
